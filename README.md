@@ -61,15 +61,7 @@ This project includes:
 
 ## ⚙️ Setup and Usage
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Scalable2025/Task_2_Base.git
-cd Task_2_Base
-````
-
-> Replace with your forked URL after cloning and customizing.
-
-### 2. Configure Environment
+### 1. Configure Environment
 
 Edit `application.properties`:
 
@@ -79,7 +71,7 @@ Edit `application.properties`:
   * `Name=YourName`
 * Use port based on your ID (e.g., `8078` for `52-8078`).
 
-### 3. Build and Run
+### 2. Build and Run
 
 ```bash
 mvn clean install
@@ -134,13 +126,6 @@ mvn test
 * Dockerized deployment
 * Managing complex entity relationships (Many-to-Many, One-to-Many)
 * API testing and Maven-based builds
-
----
-
-## 🙋‍♂️ Why Hire Me?
-
-This project showcases my ability to develop scalable, database-driven applications with a strong architectural foundation.
-From entity design and API implementation to Dockerization, this reflects my **full-stack backend engineering capabilities**—ideal for roles requiring robust, maintainable, and scalable solutions.
 
 ---
 
