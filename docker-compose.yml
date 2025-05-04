@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  task2:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nardy_52_8695
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+
+  task_2:
+    image: task_2
+    restart: always
+    depends_on:
+      - task2
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://task2:5432/nardy_52_8695
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD:  123
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    ports:
+      - "8695:8695" 
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
